@@ -26,9 +26,9 @@ public class ArrayStack<T> implements Stack<T> {
 
     @Override
     public T pop() {
-        // homework
-        T val = null;   // place holder
-        return val;   // place holder
+        T val = (T) data[--size];
+        data[size] = null;
+        return val; 
     }
 
     @Override
