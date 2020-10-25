@@ -4,7 +4,11 @@ public class ValidParentheses {
 
     // Do not change signature (function name, parameters, return type)
     public static boolean isValid(String str) {
-        // homework
+        if (str == null) {
+            return true;
+
+        }
+
         // !!! must use ArrayStack or LinkedListStack from problem 1
         return false; // place holder
     }

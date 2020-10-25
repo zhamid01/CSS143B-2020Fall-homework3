@@ -17,8 +17,9 @@ public class ArrayStack<T> implements Stack<T> {
 
     @Override
     public boolean push(T val) {
-        if (size  < data.length) {
-            data[size++] = val;
+        if (size < data.length) {
+            data[size] = val;
+            size++;
             return true;
         }
         return false;
@@ -26,18 +27,16 @@ public class ArrayStack<T> implements Stack<T> {
 
     @Override
     public T pop() {
-        T val = (T) data[--size];
-        data[size] = null;
+        T val = data[size - 1];
+        data[size - 1] = null;
+        size--;
         return val;
     }
 
     @Override
     public T peek() {
-        T val = (T) data[size];
-        if (data[size] != null) {
-            return val;
-        }
-        return null;
+        T val = data[size - 1];
+        return val;
     }
 
     @Override
