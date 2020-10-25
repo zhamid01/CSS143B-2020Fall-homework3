@@ -8,7 +8,7 @@ public class LinkedListStack<T> implements Stack<T> {
     private LinkedList<T> data;
 
     public LinkedListStack() {
-        // homework
+        this.data = new LinkedList<>();
     }
 
     @Override

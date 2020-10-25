@@ -33,7 +33,6 @@ public class ArrayStack<T> implements Stack<T> {
 
     @Override
     public T peek() {
-        // homework
         T val = (T) data[size];
         return val;
     }
