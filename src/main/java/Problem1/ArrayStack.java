@@ -11,7 +11,7 @@ public class ArrayStack<T> implements Stack<T> {
     }
 
     public ArrayStack(int capacity) {
-        this.size = capacity;
+        this.size = 0;
         this.data = (T[]) new Object[capacity];
     }
 
@@ -34,7 +34,10 @@ public class ArrayStack<T> implements Stack<T> {
     @Override
     public T peek() {
         T val = (T) data[size];
-        return val;
+        if (data[size] != null) {
+            return val;
+        }
+        return null;
     }
 
     @Override
