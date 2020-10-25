@@ -1,5 +1,7 @@
 package Problem1;
 
+import java.util.Objects;
+
 public class ArrayStack<T> implements Stack<T> {
     // do not change member variables
     private T[] data;
@@ -9,13 +11,17 @@ public class ArrayStack<T> implements Stack<T> {
     }
 
     public ArrayStack(int capacity) {
-        // homework
+        this.size = capacity;
+        this.data = (T[]) new Object[capacity];
     }
 
     @Override
     public boolean push(T val) {
-        // homework
-        return false;   // place holder
+        if (size  < data.length) {
+            data[size++] = val;
+            return true;
+        }
+        return false;
     }
 
     @Override
