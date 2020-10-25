@@ -28,14 +28,14 @@ public class ArrayStack<T> implements Stack<T> {
     public T pop() {
         T val = (T) data[--size];
         data[size] = null;
-        return val; 
+        return val;
     }
 
     @Override
     public T peek() {
         // homework
-        T val = null;   // place holder
-        return val;   // place holder
+        T val = (T) data[size];
+        return val;
     }
 
     @Override
