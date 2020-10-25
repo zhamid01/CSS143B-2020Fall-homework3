@@ -1,5 +1,7 @@
 package Problem2;
 
+import java.util.List;
+
 // all functions assume using dummy node
 public class SingleLinkedList {
     // do not add member variables
@@ -28,7 +30,8 @@ public class SingleLinkedList {
 
     public int removeAll(int valueToRemove) {
         int count = 0;
-        ListNode n1 = new ListNode();
+        ListNode n1 = head;
+        ListNode n2 = null;
         if (n1.val == valueToRemove) {
             n1 = n1.next;
             count++;
@@ -38,6 +41,8 @@ public class SingleLinkedList {
                 n1.next = n1.next.next;
                 count++;
             }
+            n2 = n1;
+            n1 = n1.next;
         }
         return count;
     }
