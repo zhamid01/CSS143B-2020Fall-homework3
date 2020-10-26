@@ -2,6 +2,12 @@ package Problem1;
 
 import java.lang.reflect.Array;
 
+/*
+I was not able to complete the code here. In this code, I wanted to have 3 ArrayStacks and compare
+the peek values of the array. I had a specific array that I would use to store the minimum values and another that
+I would use to store other values. I wanted to code it so that the minimum value found would be at the top of
+the "min" array and that returning a peek of that array would return the minimum value.
+ */
 public class MinStack extends ArrayStack<Integer> {
     // okay to add member variables
     private ArrayStack<Integer> min;
