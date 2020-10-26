@@ -9,7 +9,13 @@ import java.io.PrintStream;
 
 public class Problem3 {
     public static void printListInReverse(ListNode list, PrintStream print) {
-        ArrayStack<>
-        print.println("hello world");   // place holder
+        LinkedListStack reverse = new LinkedListStack();
+
+        while (list != null) {
+            reverse.push(list);
+        }
+        for (int i = 0; i < reverse.size(); i++) {
+            print.println(reverse.pop());
+        }
     }
 }
