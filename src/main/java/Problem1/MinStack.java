@@ -34,21 +34,25 @@ public class MinStack extends ArrayStack<Integer> {
     @Override
     public Integer pop() {
         if (super.size() == 0) {
-            //Empty Stack
         }
         else {
             int compare = super.peek();
-            if (min.peek() == compare) {
+            if (min.peek() > compare) {
                 min.pop();
+                min.push(compare);
+            }
+            else if (min.peek() < compare) {
+                store.push(compare);
             }
         }
         return super.pop();
     }
 
     public Integer getMin() {
-        // homework
-        // loop of any kind is not allowed
-        return min.peek(); // place holder
+        if (min.size() == 0) {
+            return null;
+        }
+        return min.peek();
     }
 }
 

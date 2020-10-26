@@ -49,8 +49,6 @@ public class SingleLinkedList {
 
     // reverse the linked list nodes iteratively (no recursion)
     public void reverse() {
-        // homework
-        // in-place
     }
 
     // do not change any function below
