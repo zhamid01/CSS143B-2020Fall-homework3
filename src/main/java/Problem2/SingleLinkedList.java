@@ -1,6 +1,11 @@
 package Problem2;
 
+import java.util.LinkedList;
 import java.util.List;
+
+/* This site was used as help in this code:
+https://www.geeksforgeeks.org/reverse-a-linked-list/
+ */
 
 // all functions assume using dummy node
 public class SingleLinkedList {
@@ -49,6 +54,16 @@ public class SingleLinkedList {
 
     // reverse the linked list nodes iteratively (no recursion)
     public void reverse() {
+        ListNode temp = null;
+        ListNode main = head.next;
+        while (main != null) {
+            ListNode next = head.next.next;
+            next = main.next;
+            main.next = temp;
+            temp = main;
+            main = next;
+        }
+        head.next = temp;
     }
 
     // do not change any function below
