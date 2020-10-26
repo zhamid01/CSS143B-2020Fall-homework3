@@ -48,7 +48,7 @@ public class MinStack extends ArrayStack<Integer> {
     public Integer getMin() {
         // homework
         // loop of any kind is not allowed
-        return -1; // place holder
+        return min.peek(); // place holder
     }
 }
 
