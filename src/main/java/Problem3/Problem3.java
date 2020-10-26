@@ -22,7 +22,7 @@ public class Problem3 {
             for (ListNode i = list; i != null; i = i.next) {
                 reverse.push(i);
             }
-            for (int i = 0; i < reverse.size(); i++) {
+            for (int i = reverse.size(); i > 0; i--) {
                 print.println(reverse.pop());
             }
         }

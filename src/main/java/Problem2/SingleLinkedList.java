@@ -36,19 +36,21 @@ public class SingleLinkedList {
 
     public int removeAll(int valueToRemove) {
         int count = 0;
-        ListNode n1 = head;
         ListNode n2 = null;
-        if (n1.val == valueToRemove) {
-            n1 = n1.next;
+        if (head.val == valueToRemove) {
+            head = head.next;
             count++;
+            size = size -1;
         }
+        ListNode n1 = head;
         while (n1.next != null) {
             if (n1.next.val == valueToRemove) {
                 n1.next = n1.next.next;
                 count++;
+                size = size - 1;
+            } else {
+                n1 = n1.next;
             }
-            n2 = n1;
-            n1 = n1.next;
         }
         return count;
     }
