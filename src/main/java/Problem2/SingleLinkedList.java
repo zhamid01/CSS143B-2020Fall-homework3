@@ -16,17 +16,18 @@ public class SingleLinkedList {
     public SingleLinkedList() {
         head = new ListNode();  // dummy node
     }
-
+    //Used Professor's Video
     // copy constructor
     public SingleLinkedList(SingleLinkedList list) {
         if (list == null) {
             return;
         }
         ListNode n1 = new ListNode();
+        head = n1;
         ListNode n2 = list.head.next;
 
         while (n2 != null) {
-            n2 = new ListNode(n2.val);
+            n1.next = new ListNode(n2.val);
             n1 = n1.next;
             n2 = n2.next;
         }
