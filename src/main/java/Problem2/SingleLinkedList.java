@@ -36,9 +36,9 @@ public class SingleLinkedList {
 
     public int removeAll(int valueToRemove) {
         int count = 0;
-        ListNode n2 = null;
-        if (head.val == valueToRemove) {
-            head = head.next;
+        ListNode n2 = head;
+        if (n2.val == valueToRemove) {
+            n2 = n2.next;
             count++;
             size = size -1;
         }
