@@ -35,6 +35,9 @@ public class ArrayStack<T> implements Stack<T> {
 
     @Override
     public T peek() {
+        if (size == 0) {
+            return null;
+        }
         T val = data[size - 1];
         return val;
     }
