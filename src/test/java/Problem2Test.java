@@ -16,6 +16,7 @@ public class Problem2Test {
                 theirList.add(i);
             }
             SingleLinkedList myList = new SingleLinkedList(theirList);
+            //myList.add(4); //Used to verify copy constructor is working
             assertEquals(theirList, myList);
 
             // change the list being copied to verify copy constructor
